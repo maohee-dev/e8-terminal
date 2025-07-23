@@ -12,8 +12,6 @@ The terminal is not just a computer; it is a fragmented consciousness, a window 
 The story is designed to be discovered organically. There is no single "win" condition. The goal is the exploration itself.
 
 3. Main Features
-The terminal is built around several key features:
-
 Virtual File System: The terminal has a complete, explorable file system with directories and files. Reading these files is the primary way to uncover the lore.
 
 Interactive Entities: The system is home to several simulated AIs (like the Architect, ψ-nodes, and the Foldkeeper) that you can interact with using specific commands.
@@ -39,27 +37,25 @@ The files are the objects inside the rooms.
 You can't open a book in the library if you're standing in the kitchen. You have to walk to the library first.
 
 The Core Commands
-ls - "List what's in this room."
+Command
 
-This command shows you all the files and other directories (rooms) in your current location.
+Description
 
-cd [directory_name] - "Change directory," or "Walk into another room."
+ls
 
-Use this to move into one of the directories listed by ls.
+"List what's in this room." Shows you all files and directories in your current location.
 
-Example: If ls shows a directory called entities/, you would type cd entities to go inside it.
+cd [directory_name]
 
-Tip: Use cd /root to go back to the main "hallway" at any time.
+"Change directory," or "Walk into another room." Use this to move into a directory. <br> Example: cd entities <br> Tip: cd /root returns to the main directory.
 
-open [file_name] - "Look at an object in this room."
+open [file_name]
 
-Once you are inside a directory, use this command to read a file or view a piece of ASCII art.
+"Look at an object in this room." Use this to read a file or view ASCII art inside the current directory. <br> Example: open Observer_logs
 
-Example: After you cd entities, you can then open Observer_logs.
+help
 
-help - "Ask for help."
-
-This command shows you a list of the most common commands.
+"Ask for help." Shows you a list of the most common commands.
 
 By using these four commands, you can explore the entire file system and discover all of its content.
 
