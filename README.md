@@ -104,7 +104,7 @@ All entities, events, and ASCII art are plain JSON objects—feel free to remix.
 
 ## 📜 License & Credits
 
-MIT © 2024–∞ [Your Name Here]  
+MIT © 2025–∞ OmniverseOS  
 Built with Tone.js, Google Fonts, and too much coffee.  
 If you unravel the final layer, send a postcard from the 8th dimension.
 
