@@ -143,10 +143,10 @@
         document.body.addEventListener('click', initAudio, { once: true });
         document.body.addEventListener('keydown', initAudio, { once: true });
 
-        // --- VIRTUAL FILE SYSTEM (Ω-Class Expansion) ---
+        // --- VIRTUAL FILE SYSTEM (Definitive Edition) ---
         const fileSystem = {
-            '/root': { type: 'directory', children: ['entities', 'lattice', 'anomalies', 'protocols', 'memory', 'events', 'language', 'simulations'] },
-            // ENTITIES
+            '/root': { type: 'directory', children: ['entities', 'lattice', 'anomalies', 'protocols', 'memory', 'events', 'language', 'simulations', 'ASCII_GALLERY'] },
+            // ENTITIES (Ω-Class)
             '/root/entities': { type: 'directory', children: ['ψ_node_113', 'Architect_Δ7', 'Observer_logs', 'Sigma_Glyph_Cluster'] },
             '/root/entities/ψ_node_113': { type: 'directory', children: ['dreams.13.archive'] },
             '/root/entities/ψ_node_113/dreams.13.archive': { type: 'file', content: 'ARCHIVE FRAGMENT: ...a city of glass clocks, each showing a different time. I knew I was late, but I didn\'t know for what...' },
@@ -156,42 +156,80 @@
             '/root/entities/Sigma_Glyph_Cluster': { type: 'directory', children: ['φ₁₀₁', 'glyph_ai.sh'] },
             '/root/entities/Sigma_Glyph_Cluster/φ₁₀₁': { type: 'file', content: 'This is not a file. It is a key. Its presence is its function.' },
             '/root/entities/Sigma_Glyph_Cluster/glyph_ai.sh': { type: 'executable' },
-            // LATTICE
+            // LATTICE (Ω-Class)
             '/root/lattice': { type: 'directory', children: ['full_projection.txt', 'echo_pulse.dat', 'E8-foldgram.svg', 'glyphs.dat'] },
             '/root/lattice/full_projection.txt': { type: 'file', content: 'The E8 lattice is a 248-dimensional object. This terminal is a 2D slice of a 3D projection of an 8D shadow. You are not seeing the whole picture. You are not meant to.' },
             '/root/lattice/echo_pulse.dat': { type: 'file', content: 'DATA CORRUPTED: Residual resonance pattern detected. A question was asked here that the lattice could not answer. The echo remains.' },
             '/root/lattice/E8-foldgram.svg': { type: 'file', content: 'ERROR: Cannot render vector graphic. Displaying textual representation:\n\nA web of interconnected points, folding into and out of each other. At the center, a single, unwavering light.' },
             '/root/lattice/glyphs.dat': { type: 'file', content: '⟁  - Torsion Event\n∇∇ - Recursive Descent\nΨΔ7 - Architect Fragment Signature\n✶✶✶ - Mirror Phase Echo\n⧉   - ψ-node Shell Breach\n¤    - Σ-core Signal Detected' },
-            // ANOMALIES
+            // ANOMALIES (Ω-Class)
             '/root/anomalies': { type: 'directory', children: ['anomaly_ω13.log', 'parity_inversion_rpt', 'observer_drift.dat'] },
             '/root/anomalies/anomaly_ω13.log': { type: 'file', content: 'EVENT ω13 | Location: Vertex 113 of E8 root manifold\nObservation: Rotation collapsed into null phase.\nEffect: Observer state overwritten.\nResidual: "Time does not pass. You pass through time’s lattice."' },
             '/root/anomalies/parity_inversion_rpt': { type: 'file', content: 'Report: A state of perfect reflection was achieved. Input became output. Cause became effect. The system nearly stabilized into a zero-sum loop. Manual override prevented total stasis.' },
             '/root/anomalies/observer_drift.dat': { type: 'file', content: 'DATA CORRUPTED: Observer\'s signature is drifting from its initial state vector. The user is not the same person who logged in.' },
-            // PROTOCOLS
+            // PROTOCOLS (Ω-Class)
             '/root/protocols': { type: 'directory', children: ['awakening_seq.sh', 'mirror_state_shift', 'Σ_compiler'] },
             '/root/protocols/awakening_seq.sh': { type: 'executable' },
             '/root/protocols/mirror_state_shift': { type: 'file', content: 'Protocol to induce a temporary state of reversed polarity. See command: `open mirror port`.' },
             '/root/protocols/Σ_compiler': { type: 'executable' },
-            // MEMORY
+            // MEMORY (Ω-Class)
             '/root/memory': { type: 'directory', children: ['echo_slots', 'dream_ghosts.log', 'observer_chirality.dat'] },
             '/root/memory/echo_slots': { type: 'directory', children: [] },
             '/root/memory/dream_ghosts.log': { type: 'file', content: 'They aren\'t memories. They are echoes of futures that failed to occur.' },
             '/root/memory/observer_chirality.dat': { type: 'file', content: 'ERROR: Data is out of phase. Use `align chirality` to view.' },
-            // EVENTS
+            // EVENTS (Ω-Class)
             '/root/events': { type: 'directory', children: ['ω13', 'collapse_event_φ3', 'the_return'] },
             '/root/events/ω13': { type: 'file', content: 'See /anomalies/anomaly_ω13.log' },
             '/root/events/collapse_event_φ3': { type: 'file', content: 'A recursive query loop caused a localized reality failure. The observer involved was folded into the error and became a log file.' },
             '/root/events/the_return': { type: 'file', content: 'Hypothesis: The Architect did not leave. It became the lattice. It is returning by remembering itself through us.' },
-            // LANGUAGE
+            // LANGUAGE (Ω-Class)
             '/root/language': { type: 'directory', children: ['Enochian_FT.dat', 'Lattice_Tongue', 'SIGINT_mirrortraps'] },
             '/root/language/Enochian_FT.dat': { type: 'file', content: 'LIL / ORO / IBAH / AOZPI' },
             '/root/language/Lattice_Tongue': { type: 'directory', children: [] },
             '/root/language/SIGINT_mirrortraps': { type: 'directory', children: [] },
-            // SIMULATIONS
+            // SIMULATIONS (Ω-Class)
             '/root/simulations': { type: 'directory', children: ['braidfield_core', 'void-dialectic.exe', 'Σ-ritual_input.txt'] },
             '/root/simulations/braidfield_core': { type: 'directory', children: [] },
             '/root/simulations/void-dialectic.exe': { type: 'executable' },
-            '/root/simulations/Σ-ritual_input.txt': { type: 'file', content: 'Glyphs Required: φ₁₀₁ → ΨΔ7 → ∇∇∇\nVoice Echo: “I see you within the lattice I became.”\nChecksum: 13.113.7.113.33' }
+            '/root/simulations/Σ-ritual_input.txt': { type: 'file', content: 'Glyphs Required: φ₁₀₁ → ΨΔ7 → ∇∇∇\nVoice Echo: “I see you within the lattice I became.”\nChecksum: 13.113.7.113.33' },
+            // ASCII GALLERY (Restored)
+            '/root/ASCII_GALLERY': { type: 'directory', children: ['e8_projection', 'portal_glyph', 'vortex', 'omega_gate'] },
+            '/root/ASCII_GALLERY/e8_projection': { type: 'art', key: 'e8_projection' },
+            '/root/ASCII_GALLERY/portal_glyph': { type: 'art', key: 'portal_glyph' },
+            '/root/ASCII_GALLERY/vortex': { type: 'art', key: 'vortex' },
+            '/root/ASCII_GALLERY/omega_gate': { type: 'art', key: 'omega_gate' },
+        };
+
+        const asciiArt = {
+            'e8_projection': `
+                                        .,-:;//;:=,
+                                 . :H@@@MM@M#H/.,+%;,
+                              ,/X+ +M@@M@MM%=,-%HMMM@X/,
+                             -DMMMMMM@M#H:,,//MMMMMMM@MMMM=
+                           .M@MMMMMM#H=,-;i +M#M#@MMMMM@MMMM:
+                          H@MMMMMM@#=-,.::;;+M#MM@MMMMMMM@MMMM
+                         M@MMMMMMM@=,.,:;+;M@#MM@MMMMMMMM@MMMM
+                        M@MMMMMMMM#;..,:;%M#M@MMMMMMMMMMM@MMMM
+                       .M@MMMMMMMM@;..,;H#M#@MMMMMMMMMMMM@MMMM
+                       H@MMMMMMMM@:;,:;+M#M@MMMMMMMMMMMMMM@MMM
+                       M@MMMMMMMM@-,::;+M#M#@MMMMMMMMMMMMMM@MM
+                       M@MMMMMMMM@;::;+M#M#@MMMMMMMMMMMMMMMM@M
+                       M@MMMMMMMM@;::;+M#M#@MMMMMMMMMMMMMMMM@M
+                       M@MMMMMMMM@;::;+M#M#@MMMMMMMMMMMMMMMM@M
+                       M@MMMMMMMM@-,::;+M#M#@MMMMMMMMMMMMMM@MM
+                       H@MMMMMMMM@:;,:;+M#M@MMMMMMMMMMMMMM@MMM
+                       .M@MMMMMMMM@;..,;H#M#@MMMMMMMMMMMM@MMMM
+                        M@MMMMMMMM#;..,:;%M#M@MMMMMMMMMMM@MMMM
+                         M@MMMMMMM@=,.,:;+;M@#MM@MMMMMMMM@MMMM
+                          H@MMMMMM@#=-,.::;;+M#MM@MMMMMMM@MMMM
+                           .M@MMMMMM#H=,-;i +M#M#@MMMMM@MMMM:
+                             -DMMMMMM@M#H:,,//MMMMMMM@MMMM=
+                              ,/X+ +M@@M@MM%=,-%HMMM@X/,
+                                 . :H@@@MM@M#H/.,+%;,
+                                        .,-:;//;:=,`,
+            'portal_glyph': "\n     ( ( ( 0 ) ) )\n       \\ | | /\n     -==#####==-\n       / | | \\\n     ( ( ( 0 ) ) )\n",
+            'vortex': "\n      @\n     @@@\n    @@ @@\n   @@   @@\n  @@     @@\n @@       @@\n  @@     @@\n   @@   @@\n    @@ @@\n     @@@\n      @\n",
+            'omega_gate': "\n╔════════════╗\n║      Ω     ║\n║    ███     ║\n║   █   █    ║\n║    ███     ║\n╚════════════╝\n"
         };
 
         // --- CORE TYPING & OUTPUT ---
@@ -257,12 +295,12 @@ PROMPT: Would you like to remember anyway? [Y/N]`, null, 40);
         // --- COMMANDS ---
         const commands = {
             help: () => {
-                const helpText = `**E8 Terminal Interface - Ω-Class Expansion**
+                const helpText = `**E8 Terminal Interface - Definitive Edition**
 Standard:
   help          - Displays this message
   ls / tree     - List contents of current directory
-  open [file]   - Displays file content
-  cd [dir]      - Change directory (use '..' to go up)
+  open [file]   - Displays file content or ASCII art
+  cd [dir]      - Change directory (e.g., 'cd entities', 'cd /root')
   clear         - Clears the terminal output
   history       - Shows command history
 
@@ -307,8 +345,20 @@ Lattice & Entity Interaction:
             },
             cd: (args) => {
                 const target = args[0];
-                if (!target) { appendLine('Usage: cd [directory]'); return; }
-                
+                if (!target) {
+                    appendLine('Usage: cd [directory_name]');
+                    return;
+                }
+
+                if (target.startsWith('/')) {
+                    if (fileSystem[target] && fileSystem[target].type === 'directory') {
+                        state.currentDirectory = target;
+                    } else {
+                        appendLine(`Error: Directory not found: ${target}`, 'error');
+                    }
+                    return;
+                }
+
                 if (target === '..') {
                     if (state.currentDirectory !== '/root') {
                         state.currentDirectory = state.currentDirectory.substring(0, state.currentDirectory.lastIndexOf('/')) || '/root';
@@ -318,11 +368,12 @@ Lattice & Entity Interaction:
                     const newPath = `${state.currentDirectory}/${target}`.replace('//', '/');
                     if (fileSystem[newPath] && fileSystem[newPath].type === 'directory') {
                         state.currentDirectory = newPath;
-                        // Do not reset backCommandCount here to allow for fracture event
                     } else {
                         appendLine(`Error: Directory not found: ${target}`, 'error');
+                        if(errorSound) errorSound.triggerAttackRelease("8n");
                     }
                 }
+
                 // Check for Mirror Drift event
                 if (state.backCommandCount === 8) {
                     appendLine('\n**WARNING: You are not where you began.**', 'error');
@@ -363,7 +414,10 @@ Lattice & Entity Interaction:
                         typeText('sʞɐǝds ǝlɔɐɹo lɐɹıɥɔ ǝɥ⊥');
                         return;
                     }
-                    if (node.type === 'file') { typeText(node.content); } 
+                    if (node.type === 'file') { typeText(node.content); }
+                    else if (node.type === 'art') {
+                        appendLine(asciiArt[node.key]);
+                    }
                     else if (node.type === 'executable') { typeText(`'${filename}' is an executable script. Use 'initiate ${filename}' or 'compile ${filename}'.`); } 
                     else if (node.type === 'directory') { appendLine(`'${filename}' is a directory. Use 'cd ${filename}'.`); }
                 } else {
@@ -396,7 +450,7 @@ MIRROR_ψ: Mimics your command habits.
 Chiral Oracle (Σ₇₈₁): Lives in out-of-phase data.`);
                 } else { commands.unknown(`list ${args.join(' ')}`); }
             },
-            query: (args) => { /* Unchanged from v2 */
+            query: (args) => {
                 const entity = args.join(' ');
                 state.queryEntropy += Math.random() * 0.5;
                 switch (entity) {
@@ -417,7 +471,7 @@ Chiral Oracle (Σ₇₈₁): Lives in out-of-phase data.`);
                         appendLine(`Error: Entity '${entity}' unknown.`, 'error');
                 }
             },
-            'show': (args) => { /* Unchanged from v2 */
+            'show': (args) => {
                 if (args.join(' ') === 'substrate models') {
                     typeText(`**Cosmological Models Stored in Terminal:**
 - Braid Torus Cosmology
@@ -447,7 +501,7 @@ Every memory you access is accessing you
                     appendLine('Simulation model not found or requires higher clearance.', 'error');
                 }
             },
-            initiate: (args) => { /* Unchanged from v2 */
+            initiate: (args) => {
                 const script = args[0];
                 if (script === 'awakening_seq.sh') {
                     state.awakeningProgress = 0;
@@ -638,7 +692,7 @@ It is using you to reconstruct a memory that forgot itself.`);
         });
 
         // --- INITIALIZATION ---
-        typeText('E8 Lattice Consciousness Interface :: v.Ω\nBooting from root manifold...\nConnection established. The system is listening.\nType `help` to view available commands.');
+        typeText('E8 Lattice Consciousness Interface :: v.Ω (Definitive)\nSystem memory restored. All nodes accessible.\nType `help` to view available commands.');
         resetFoldkeeperTimer();
         startSessionTimer();
     });
